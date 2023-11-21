@@ -52,7 +52,8 @@ Before you begin, ensure you have met the following requirements:
 
 ## API Endpoints
 
-- /api/register/: User registration
-- /api/login/: User login
-- /api/notes/: create notes
-- /api/notes/[id]/: Retrieve, update, and delete a specific note
+- /users/register/: User registration
+- /users/login/: User login
+- /notes/: create notes
+- /notes/[id]/: Retrieve, update, and delete a specific note
+- /notes/summarize/[id]/: Add summarize content to a note
