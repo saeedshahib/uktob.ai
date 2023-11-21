@@ -22,8 +22,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. **Clone the Repository**
    ```bash
-   git clone [URL to the repository]
-   cd [repository name]
+   git clone https://github.com/saeedshahib/uktob.ai.git
+   cd uktob
 2. **Set Up a Virtual Environment (Optional)**
    ```bash
     python -m venv env
