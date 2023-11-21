@@ -54,5 +54,5 @@ Before you begin, ensure you have met the following requirements:
 
 - /api/register/: User registration
 - /api/login/: User login
-- /api/notes/: List and create notes
-- /api/notes/<id>/: Retrieve, update, and delete a specific note
+- /api/notes/: create notes
+- /api/notes/[id]/: Retrieve, update, and delete a specific note
