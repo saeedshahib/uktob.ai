@@ -35,7 +35,8 @@ Before you begin, ensure you have met the following requirements:
      ```bash
      python manage.py makemigrations
      python manage.py migrate
-
+5. **Env variables**
+   Set OPENAI_API_KEY in your local_settings.py or in environment variable
 ## Running the application
 
 1. **Start the Django Server**

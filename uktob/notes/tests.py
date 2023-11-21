@@ -55,6 +55,13 @@ class NoteTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(Note.objects.count(), 0)
 
+    def test_summarize_note(self):
+        """
+        Ensure we can delete a note.
+        """
+        self.note.summarize_note_using_langchain()
+        self.assertIsNotNone(self.note.summarized_content)
+
     def tearDown(self):
         self.author.delete()
         self.note.delete()
