@@ -24,7 +24,10 @@ class NoteSummarizeView(UpdateAPIView):
     queryset = Note.objects.all()
 
     def put(self, request, *args, **kwargs):
-        note = self.get_object()
-        note.summarize_note_using_langchain()
-        serializer = self.get_serializer(note)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        try:
+            note = self.get_object()
+            note.summarize_note_using_langchain()
+            serializer = self.get_serializer(note)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Exception as ve:
+            return Response({"error": "server error"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
